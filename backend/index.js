@@ -12,6 +12,9 @@ const CommentRoutes = require('./Router/comment.router.js');
 const CheckoutRoutes = require('./Router/checkout.router.js');
 const AdditemRoutes = require('./Models/additem.model.js');
 const CashierRoutes = require('./Router/cashier.router.js'); 
+const AppointmentRoutes = require('./Router/appointment.router.js');
+const BillingRoutes = require('./Router/billing.router.js');
+const ReportRoutes = require('./Router/report.router.js');  
 
 const app = express();
 app.use(cors());
@@ -25,6 +28,9 @@ app.use('/comment', CommentRoutes);
 app.use('/checkout',CheckoutRoutes ); 
 app.use('/additem', AdditemRoutes);
 app.use('/cashier', CashierRoutes);  
+app.use('/appointments', AppointmentRoutes);
+app.use('/billing', BillingRoutes);
+app.use('/reports', ReportRoutes); 
 
 
 mongoose.connect(process.env.MONGODB_URI)
