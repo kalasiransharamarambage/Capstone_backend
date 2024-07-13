@@ -28,6 +28,9 @@ const appointmentSchema = new Schema({
     type: String,
     default: 'Pending',
   },
+  count:{
+    type:Number,
+  }
 });
 
 

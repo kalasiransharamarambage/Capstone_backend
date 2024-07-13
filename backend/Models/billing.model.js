@@ -29,6 +29,12 @@ const BillingSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-}, { timestamps: true });
+  count:{
+    type:Number,
+  },
+  totalSum:{
+    type:Number,
+  }
+});
 
 module.exports = mongoose.model('Billing', BillingSchema);
