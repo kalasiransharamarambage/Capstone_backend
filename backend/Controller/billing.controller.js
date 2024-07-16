@@ -26,6 +26,7 @@ const saveBillingDetails = async (req, res) => {
     res.status(500).json({ message: 'Error saving billing details', error });
   }
 };
+
 const getBillingCount = async (req, res) => {
   try {
     const count = await Billing.countDocuments();
@@ -35,6 +36,7 @@ const getBillingCount = async (req, res) => {
     res.status(500).json({ message: 'Error getting billing count', error });
   }
 };
+
 const getBillingSum = async (req, res) => {
   try {
     const result = await Billing.aggregate([
@@ -53,6 +55,9 @@ const getBillingSum = async (req, res) => {
     res.status(500).json({ message: 'Error getting billing sum', error });
   }
 };
+
+
+
 module.exports = {
   getBillings,
   saveBillingDetails,

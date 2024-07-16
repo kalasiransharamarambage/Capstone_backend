@@ -34,7 +34,8 @@ const BillingSchema = new mongoose.Schema({
   },
   totalSum:{
     type:Number,
-  }
+  },
+ 
 });
 
 module.exports = mongoose.model('Billing', BillingSchema);

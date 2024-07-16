@@ -24,6 +24,7 @@ mobileno:{
 email:{
     type:String,
     required:true,
+    unique: true,
 },
 address:{
     type:String,
@@ -38,6 +39,10 @@ experience:{
 },
 additionalDetails:{
     type:String,
+},
+password:{
+    type:String,
+    required:true,
 }
  });
 
